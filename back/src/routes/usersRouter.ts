@@ -7,9 +7,9 @@ usersRouter.get("/", getAllUsers) //controlador, 2do parametro que recibe el met
   
 usersRouter.get("/:id", getUserById ) //obtener el detalle de un usuario especifico por id
 
-usersRouter.post("/", register) //registro nuevo usuario
+usersRouter.post("/register", register) //registro nuevo usuario
 
-usersRouter.post("/", login) //login del usuario
+usersRouter.post("/login", login) //login del usuario
 
 
 export default usersRouter;

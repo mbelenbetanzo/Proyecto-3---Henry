@@ -1,10 +1,10 @@
 interface IUser {
-    id: number;
+    id: number; //este tampoco ya que se genera dinamicamente
     name: string;
     email: string;
-    birthdate: string;
+    birthdate: Date;
     dni: string;
-    credentialsId: number;
+    credentialsId: number; //este no lo utilizo cuando creo el usuario
 };
 
 export default IUser; 

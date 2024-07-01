@@ -3,6 +3,7 @@ import morgan from "morgan";
 import cors from "cors";
 import router from "./routes/index"
 
+
 const app = express();
 
 app.use(morgan("dev")); //LA APP USARA TODO ESO, OSEA EL SERVIDOR PARA FUNCIONAR

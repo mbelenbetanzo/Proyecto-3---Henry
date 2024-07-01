@@ -1,11 +1,29 @@
 import app from "./server"
 import { PORT } from "./config/envs";
+import "reflect-metadata"
 
 //INDEX LEVANTA SERVIDOR Y BASE DE DATOS, ESTE ES EL ENTRY POINT PARA NODEMON
 
-app.listen(PORT, () => {
-    console.log(`Server listening on port ${PORT}`)
-});
+import { AppDataSource } from "./config/data-source";
+
+AppDataSource.initialize() //la base de datos debe existir antes, la creo en sql shell
+.then(res=>{ //el metodo initialize de devuelve una promesa
+    console.log("Database connected");
+    app.listen(PORT, () => {
+        console.log(`Server listening on port ${PORT}`)
+    });
+})
+.catch(error => {
+    throw Error("Connection failed" + error)
+})
+
+//app.listen(PORT, () => {
+ //   console.log(`Server listening on port ${PORT}`)
+//});
+
+
+
+
 
 
 //instale dependencias
