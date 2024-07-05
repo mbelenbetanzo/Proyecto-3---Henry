@@ -1,15 +1,17 @@
-import express from "express";
-import morgan from "morgan";
-import cors from "cors";
-import router from "./routes/index"
 
+import express from 'express';
+import cors from 'cors';
+import morgan from 'morgan';
+import indexR from './routes/indexR';
+import appointmentsR from './routes/appointmentR';
 
-const app = express();
+const server = express();
 
-app.use(morgan("dev")); //LA APP USARA TODO ESO, OSEA EL SERVIDOR PARA FUNCIONAR
-app.use(express.json());
-app.use(cors());
+server.use(cors());
+server.use(express.json());
+server.use(morgan('dev'));
 
-app.use(router)
-
-export default app;
+// Rutas principales
+server.use('/turnos', appointmentsR);
+server.use ('/', indexR)
+export default server;

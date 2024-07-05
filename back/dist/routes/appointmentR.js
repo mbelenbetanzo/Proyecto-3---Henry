@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const appointmentsCont_1 = require("../controllers/appointmentsCont");
+const appointmentsR = (0, express_1.Router)();
+appointmentsR.get("/", appointmentsCont_1.getAllAppointments);
+appointmentsR.get("/:turnId", appointmentsCont_1.getAppointmentById);
+appointmentsR.post("/", appointmentsCont_1.schedule);
+appointmentsR.put("/cancel/:turnId", appointmentsCont_1.cancel);
+exports.default = appointmentsR;
