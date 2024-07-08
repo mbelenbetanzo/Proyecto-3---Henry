@@ -12,13 +12,17 @@ function App() {
      <Navbar/>
      <img className={style.glowimg} src="/images/glowgirl2.png" alt="" />
      <Home/>
-    <MisTurnos/>
+     <Login/>
     </div>
-    <Register/>
-    <Login/>
+    
+    
     </>
   )
 }
 export default App
 //const [count, setCount] = useState(0)
-   
+   //<MisTurnos/>
+//<Register/>
+
+
+   //
