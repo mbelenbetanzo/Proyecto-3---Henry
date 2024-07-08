@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+*::selection{
+    background-color: black;
+    color: white;
+}
+.header{
+    background: url(/images/card3.png);
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 10px 4px 10px 7px rgba(235, 177, 209, 0.75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    height: 75px;
+}
+.header__logo{
+    width: 60px;
+    margin: 7px;
+    padding: 5px;
+    border-radius: 50%;
+}
+.header__nav, .header__containlogin {
+    display: none;
+}
+.header__containloginmobile{
+    color: #fff;
+    font-size: 30px;
+}
+
+.header__containlogin {
+    display: flex;
+   
+   
+  }
+  
+  .header_login {
+
+    width: 50px; 
+    height: 50px;
+    background: url('/images/iconologin.svg');
+    border-radius: 50%;
+    cursor: pointer;
+    
+}
+
+@media (min-width:768px) {
+    .header__containloginmobile{
+        display: none;
+    }
+ 
+    .header__nav{
+        
+        display: flex;
+        justify-content: space-between;
+    }
+    .header__navbtn{
+        color: rgb(235, 53, 113);
+        font-size: 17px;
+        text-decoration: none;
+        margin-left: 30px;
+        font-weight: bold;
+    }
+
+    .header__containlogin {
+        display: flex;
+        margin-right: -300px;
+       
+      }
+      
+      .header_login {
+
+        width: 50px; 
+        height: 50px;
+        background: url('/images/iconologin.svg');
+        border-radius: 50%;
+        cursor: pointer;
+        
+       
+      }
+}
+
+
