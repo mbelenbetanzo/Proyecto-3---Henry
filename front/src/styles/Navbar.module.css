@@ -11,7 +11,7 @@
 }
 .header{
     background: url(/images/card3.png);
-    width: 100%;
+    width: 100vw;
     padding: 10px;
     display: flex;
     flex-direction: row;
@@ -22,7 +22,7 @@
     top: 0;
     left: 0;
     z-index: 100;
-    height: 75px;
+    height: 60px;
 }
 .header__logo{
     width: 60px;
@@ -30,29 +30,11 @@
     padding: 5px;
     border-radius: 50%;
 }
-.header__nav, .header__containlogin {
-    display: none;
-}
-.header__containloginmobile{
-    color: #fff;
-    font-size: 30px;
-}
 
-.header__containlogin {
-    display: flex;
-   
-   
-  }
   
-  .header_login {
-
-    width: 50px; 
-    height: 50px;
-    background: url('/images/iconologin.svg');
-    border-radius: 50%;
-    cursor: pointer;
+ 
     
-}
+
 
 @media (min-width:768px) {
     .header__containloginmobile{
@@ -68,7 +50,7 @@
         color: rgb(235, 53, 113);
         font-size: 17px;
         text-decoration: none;
-        margin-left: 30px;
+        margin-left: 20px;
         font-weight: bold;
     }
 
@@ -80,9 +62,9 @@
       
       .header_login {
 
-        width: 50px; 
-        height: 50px;
-        background: url('/images/iconologin.svg');
+        width: 40px; 
+        height: 40px;
+        background: url('/images/logonavbarlogin.svg');
         border-radius: 50%;
         cursor: pointer;
         

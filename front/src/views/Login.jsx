@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react"
 import { validateLogin } from "../helpers/validateLogin";
 import axios from "axios";
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
+const MySwal = withReactContent(Swal);
 
 const Login = () => {
 
@@ -31,14 +34,23 @@ const loginUser = async () => {
   try {
     const response = await axios.post("http://localhost:3004/users/login", form);
     if(response.status === 200) {
-      alert("✨Bienvenido/a de nuevo✨")
+      MySwal.fire({
+        title: '✨¡Bienvenido!✨',
+        text: 'Estamos encantados de verte. ¡Es hora de mimarte y reservar tu próximo turno✅',
+        icon: 'success',
+        confirmButtonText: 'Cerrar'
+      });
     } else {
-      alert("No pudimos acceder a tu cuenta😟")
+      MySwal.fire({
+        title: 'Error😟',
+        text: 'No pudimos loguearte. Chequea tus datos e intenta de nuevo🙌',
+        icon: 'success',
+        confirmButtonText: 'Cerrar'
+      });
     }
     setForm(inicialState) //para limpiar los campos
   } catch (error) {
     console.log("Error del servidor", error)
-    
   }
 }
 

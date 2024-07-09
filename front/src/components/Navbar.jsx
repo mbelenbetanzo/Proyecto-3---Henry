@@ -8,10 +8,10 @@ const Navbar = () => {
         <img className={style.header__logo} src='/images/logo grande.jpg' alt="logo pequeño"/>
         </div>
         <nav className={style.header__nav}>
-             <a className={style.header__navbtn}   href="#">✨INICIO</a>
-             <a className={style.header__navbtn}   href="#">MIS TURNOS</a>
-             <a className={style.header__navbtn}   href="#">TRATAMIENTOS</a>
-             <a className={style.header__navbtn}   href="#">CONTACTANOS✨</a>
+             <a className={style.header__navbtn}   href="#">✨Inicio</a>
+             <a className={style.header__navbtn}   href="#">Mis turnos</a>
+             <a className={style.header__navbtn}   href="#">Tratamientos</a>
+             <a className={style.header__navbtn}   href="#">Contactanos✨</a>
         </nav>
         <div className={style.header__containlogin}>
             <a className={style.header_login} href=""></a>

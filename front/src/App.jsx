@@ -4,15 +4,16 @@ import MisTurnos from "./views/MisTurnos"
 import style from "./styles/App.module.css"
 import Register from "./views/Register"
 import Login from "./views/Login"
+import Footer from "./components/Footer"
 
 function App() {
   return (
     <>
     <div className={style.body}>
      <Navbar/>
-     <img className={style.glowimg} src="/images/glowgirl2.png" alt="" />
-     <Home/>
-     <Login/>
+     <img className={style.glowimg} src="/images/glowgirl1.png" alt="" />
+     <Register/>
+     <Footer/>
     </div>
     
     
@@ -22,7 +23,8 @@ function App() {
 export default App
 //const [count, setCount] = useState(0)
    //<MisTurnos/>
-//<Register/>
+//
+//<Login/>
 
 
-   //
+   //<Home/>
