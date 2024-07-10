@@ -6,7 +6,7 @@
     background: url(/images/fondoregister.png);
     height: auto;
     margin-left: 0;
-    margin-top: 0;
+    margin-top: -10px;
 
 }
 
@@ -112,4 +112,5 @@
 
 .tratamientos{
     color: rgb(211, 65, 114);
+    text-align: start
 }

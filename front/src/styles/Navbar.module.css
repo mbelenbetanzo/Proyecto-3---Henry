@@ -61,7 +61,7 @@
     }
  
     .header__nav{
-        margin-left: 150px;
+        margin-left: 80px;
         display: flex;
         justify-content: space-between;
     }
@@ -75,7 +75,7 @@
 
     .header__containlogin {
         display: flex;
-        margin-right: -100px;
+        margin-right: -180px;
        
       }
       

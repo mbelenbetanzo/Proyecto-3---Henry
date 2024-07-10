@@ -17,11 +17,11 @@ function App() {
      <Navbar/>
      <img className={style.glowimg} src="/images/glowgirl1.png" alt="" />
      <Routes>
-      <Route path="/" element={<Home/>} />
-      <Route path="/register" element={<Register/>} />
+      <Route path="/" element={<Register/>} />
+      <Route path="/login" element={<Login/>} />
       <Route path="/formAppointment" element={<FormAppointment/>} />
       <Route path="/misTurnos" element={<MisTurnos/>} />
-      <Route path="/login" element={<Login/>} />
+      <Route path="/Home" element={<Home/>} />
      </Routes>
      <Footer/>
     </div>

@@ -69,22 +69,22 @@ const handleSubmit = (event) => {
 
       <div className={style.cartel}>
        <h2 className={style.tituloCarteles}>Tratamientos:</h2>
-       <h4 className={style.tratamientos}>Corte ................................... $1000</h4>
-       <h4 className={style.tratamientos}>Corte ................................... $1000</h4>
-       <h4 className={style.tratamientos}>Corte ................................... $1000</h4>
-       <h4 className={style.tratamientos}>Corte ................................... $1000</h4>
-       <h4 className={style.tratamientos}>Corte ................................... $1000</h4>
-       <h4 className={style.tratamientos}>Corte ................................... $1000</h4>
-       <h4 className={style.tratamientos}>Corte ................................... $1000</h4>
-       <h4 className={style.tratamientos}>Corte ................................... $1000</h4>
-       <h4 className={style.tratamientos}>Corte ................................... $1000</h4>
-       <h4 className={style.tratamientos}>Corte ................................... $1000</h4>
-       <h4 className={style.tratamientos}>Corte ................................... $1000</h4>
-       <h4 className={style.tratamientos}>Corte ................................... $1000</h4>
-       <h4 className={style.tratamientos}>Corte ................................... $1000</h4>
-       <h4 className={style.tratamientos}>Corte ................................... $1000</h4>
-       <h4 className={style.tratamientos}>Corte ................................... $1000</h4>
-       <h4 className={style.tratamientos}>Corte ................................... $1000</h4>
+       <h4 className={style.tratamientos}>Corte ..................................$8.000</h4>
+       <h4 className={style.tratamientos}>Color ................................. $15.000</h4>
+       <h4 className={style.tratamientos}>Balayage .............................$20.000</h4>
+       <h4 className={style.tratamientos}>Mechitas ...............................$18.000</h4>
+       <h4 className={style.tratamientos}>Decoloracion .........................$9.000</h4>
+       <h4 className={style.tratamientos}>Alisado ..............................$19.000</h4>
+       <h4 className={style.tratamientos}>Anti-frizz .............................$15.000</h4>
+       <h4 className={style.tratamientos}>Botox argán ............................$15.00</h4>
+       <h4 className={style.tratamientos}>Botox nutritivo ......................$16.000</h4>
+       <h4 className={style.tratamientos}>Lifting capilar ......................$12.000</h4>
+       <h4 className={style.tratamientos}>Keratina ...............................$14.000</h4>
+       <h4 className={style.tratamientos}>Botox + corte ........................$21.000</h4>
+       <h4 className={style.tratamientos}>Corte + color ..........................$20.000</h4>
+       <h4 className={style.tratamientos}>Corte + alisado ...................$25.000</h4>
+       <h4 className={style.tratamientos}>Mechitas + corte ....................$25000</h4>
+       <h4 className={style.tratamientos}>Corte + lifting ......................$18.000</h4>
        
        
        

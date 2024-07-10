@@ -123,12 +123,13 @@ const handleSubmit = (event) => {
 
       <button className={style.botonForm} disabled={errors.password || errors.username || errors.name || errors.birthdate || errors.email || errors.nDni || !form.password || !form.username || !form.birthdate || !form.email || !form.nDni || !form.name  } type="submit"> Registrarse</button>
       </div>
+
+
+      <a  className={style.login} href="./login">Ya estás registrado? Inicia sesión aquí✅</a>
       </form>
 
-      <div className={style.videoContainer}>
-        <video className={style.video} autoPlay >
-          <source src="/images/videoinicio.mp4" type="video/mp4" />
-        </video>
+      <div className={style.imgContainer}>
+       <img className={style.img} src="/images/imginicio.png" alt="" />
       </div>
 
 

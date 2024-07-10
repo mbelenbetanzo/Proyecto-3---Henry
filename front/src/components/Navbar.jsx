@@ -11,14 +11,11 @@ const Navbar = () => {
         <img className={style.header__logo} src='/images/logo grande.jpg' alt="logo pequeño"/>
         </div>
         <nav className={style.header__nav}>
-             <a className={style.header__navbtn}   href="#">✨Inicio</a>
-             <a className={style.header__navbtn}   href="#">Mis turnos</a>
-             <a className={style.header__navbtn}   href="#">Tratamientos</a>
-             <a className={style.header__navbtn}   href="#">Contactanos✨</a>
+             <a className={style.header__navbtn}   href="../views/Home">✨INICIO</a>
+             <a className={style.header__navbtn}   href="#">TRATAMIENTOS</a>
+             <a className={style.header__navbtn}   href="#">CONTACTANOS✨</a>
         </nav>
-        <div className={style.contieneturno} >
-          <a  className={style.turno} href="#">Sacar turno</a>
-        </div>
+        
         <div className={style.header__containlogin}>
             <a className={style.header_login} href=""></a>
         </div>

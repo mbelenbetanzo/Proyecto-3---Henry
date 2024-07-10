@@ -1,0 +1,59 @@
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    height: 1100px;
+    margin-left: 0;
+    margin-top: -10px;
+
+}
+
+
+
+
+.bienvenido{} 
+
+.contienebotones{} 
+
+.boton{} 
+
+.main{} 
+
+.mainizq{} 
+
+.main_titulo{} 
+
+.main_parrafo{}
+.main_der{} 
+
+.main_img{} 
+
+.section{} 
+
+.section_tratamiento{} 
+
+.section_card{} 
+
+.section_titulo{}
+
+
+.section_img{} 
+
+.section_parrafo{} 
+
+.contactanos_izq{}
+
+.contactanos_titulo{}
+
+.contactanos_mapa{} 
+
+.contactanos_cmapa{} 
+.contactanos_der{} 
+
+.contactanostitulo{} 
+
+.contactanos_texto{} 
+
+.logo{}
+
+
+.contactanos_logos{}
