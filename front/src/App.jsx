@@ -7,6 +7,8 @@ import Login from "./views/Login"
 import Footer from "./components/Footer"
 import FormAppointment from "./views/Appointments"
 import {Routes, Route} from "react-router-dom"
+import Tratamientos from "./views/Tratamientos"
+import Contactanos from "./views/Contactanos"
 
 
 
@@ -22,6 +24,8 @@ function App() {
       <Route path="/formAppointment" element={<FormAppointment/>} />
       <Route path="/misTurnos" element={<MisTurnos/>} />
       <Route path="/Home" element={<Home/>} />
+      <Route path="/tratamientos" element={<Tratamientos/>} />
+      <Route path="/contactanos" element={<Contactanos/>} />
      </Routes>
      <Footer/>
     </div>

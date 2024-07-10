@@ -6,6 +6,7 @@ import withReactContent from 'sweetalert2-react-content';
 const MySwal = withReactContent(Swal);
 import style from "../styles/Register.module.css"
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -124,8 +125,8 @@ const handleSubmit = (event) => {
       <button className={style.botonForm} disabled={errors.password || errors.username || errors.name || errors.birthdate || errors.email || errors.nDni || !form.password || !form.username || !form.birthdate || !form.email || !form.nDni || !form.name  } type="submit"> Registrarse</button>
       </div>
 
-
-      <a  className={style.login} href="./login">Ya estás registrado? Inicia sesión aquí✅</a>
+      
+      <Link to="/login" className={style.login} >Ya estás registrado? Inicia sesión aquí✅</Link>
       </form>
 
       <div className={style.imgContainer}>

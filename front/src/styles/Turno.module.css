@@ -58,6 +58,7 @@
     border: none; /* Asegúrate de que el borde esté eliminado */
     cursor: pointer; /* Agrega un cursor de puntero para mejor UX */
     font-size: 14px; /* Ajusta el tamaño de la fuente si es necesario */
+    
 }
 
 

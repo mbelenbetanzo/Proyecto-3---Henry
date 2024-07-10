@@ -1,5 +1,7 @@
 import React from 'react'
 import style from '../styles/Navbar.module.css'
+import { Link } from 'react-router-dom';
+
 
 const Navbar = () => {
 
@@ -11,9 +13,9 @@ const Navbar = () => {
         <img className={style.header__logo} src='/images/logo grande.jpg' alt="logo pequeño"/>
         </div>
         <nav className={style.header__nav}>
-             <a className={style.header__navbtn}   href="../views/Home">✨INICIO</a>
-             <a className={style.header__navbtn}   href="#">TRATAMIENTOS</a>
-             <a className={style.header__navbtn}   href="#">CONTACTANOS✨</a>
+        <Link to="/home" className={style.header__navbtn}>✨INICIO</Link>
+        <Link to="/tratamientos" className={style.header__navbtn}>TRATAMIENTOS</Link>
+        <Link to="/contactanos" className={style.header__navbtn}>CONTACTANOS✨</Link>  
         </nav>
         
         <div className={style.header__containlogin}>
