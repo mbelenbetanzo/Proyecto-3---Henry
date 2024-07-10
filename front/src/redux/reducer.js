@@ -14,6 +14,14 @@ export const userSlice = createSlice({
     },
     addUserAppointments: (state, action) => {
       state.userAppointments = action.payload
+    },
+    cancelAppointmentBoton: (state, action) => {
+      state.userAppointments = state.userAppointments.map((appointment) => {
+        if (appointment.id === action.payload) {
+          return {...appointment, status: "cancelado"}
+        } 
+        return appointment;
+      })
     }
 
 
@@ -26,4 +34,4 @@ export const userSlice = createSlice({
 
 });
 
-export const { addUser, addUserAppointments } = userSlice.actions
+export const { addUser, addUserAppointments, cancelAppointmentBoton } = userSlice.actions

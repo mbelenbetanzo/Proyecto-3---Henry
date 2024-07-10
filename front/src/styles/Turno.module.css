@@ -65,6 +65,7 @@
 .cardbtn:disabled {
     background-color: rgb(177, 110, 110);
     cursor: not-allowed;
+    color: red;
 }
 
 
