@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom';
-
+import { useSelector } from 'react-redux';
 import style from "../styles/Home.module.css"
 
 const Home = () => {
+  const userLogged = useSelector((state) => state.userActive)
+
     return (
     <div className={style.contenedor} >
-        <h1 className={style.bienvenido}>Bienvenido/a de nuevo:{}</h1>
+        <h1 className={style.bienvenido}>Bienvenida de nuevo {userLogged.name} 💖</h1>
 
         <div className={style.contienebotones}>
         <Link to="/formAppointment" className={style.boton}  >Sacar turno✂️</Link>

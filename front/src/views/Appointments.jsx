@@ -37,7 +37,6 @@ const handleChange = (event) => {
 
 const registroUser = async () => {
  try {
-  console.log(form);
    const response = await axios.post("http://localhost:3004/appointments", form);
    if(response.status === 201) {
      MySwal.fire({

@@ -6,8 +6,11 @@ import withReactContent from 'sweetalert2-react-content';
 const MySwal = withReactContent(Swal);
 import style from "../styles/Login.module.css"
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addUser } from "../redux/reducer";
 
 const Login = () => {
+  const dispatch = useDispatch()
   const navigate = useNavigate();
 
 const inicialState = {
@@ -37,14 +40,18 @@ const loginUser = async () => {
   try {
     const response = await axios.post("http://localhost:3004/users/login", form);
     if(response.status === 200) {
+      dispatch(addUser(response.data.user))
       MySwal.fire({
         title: '✨¡Bienvenido!✨',
         text: 'Estamos encantados de verte. ¡Es hora de mimarte y reservar tu próximo turno✅',
         icon: 'success',
         confirmButtonText: 'Cerrar'
-        
       });
       navigate("/home")
+      //REDUX
+      
+
+
     } else {
       MySwal.fire({
         title: 'Error😟',
@@ -53,7 +60,7 @@ const loginUser = async () => {
         confirmButtonText: 'Cerrar'
       });
     }
-    setForm(inicialState) //para limpiar los campos
+    setForm(inicialState)
   } catch (error) {
     console.log("Error del servidor", error)
   }
