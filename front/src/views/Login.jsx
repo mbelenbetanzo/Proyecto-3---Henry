@@ -4,8 +4,11 @@ import axios from "axios";
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 const MySwal = withReactContent(Swal);
+import style from "../styles/Login.module.css"
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+  const navigate = useNavigate();
 
 const inicialState = {
   username: '',
@@ -39,7 +42,9 @@ const loginUser = async () => {
         text: 'Estamos encantados de verte. ¡Es hora de mimarte y reservar tu próximo turno✅',
         icon: 'success',
         confirmButtonText: 'Cerrar'
+        
       });
+      navigate("/home")
     } else {
       MySwal.fire({
         title: 'Error😟',
@@ -62,30 +67,35 @@ const handleSubmit = (event) => {
 }
 
   return (
-    <div>
-      <h2>Ingresá a tu cuenta</h2>
-      <form onSubmit={handleSubmit}>
+    <div className={style.contenedorForm}>
+      
+      <form onSubmit={handleSubmit} className={style.form}>
+      <h2 className={style.tituloForm} >Ingresá a tu cuenta</h2>
 
-      <div>
-      <label htmlFor="username">Nombre de usuario:</label>
-      <input type="text" value={form.username} name="username" placeholder="Ingresa un nombre con el que ingresarás ✅" onChange={handleChange} />
-      <h6>Debe contener entre 3 y 20 caracteres, permitiendo letras, números y guiones bajos</h6>
+      <div className={style.divForm}>
+      <label className={style.labelForm} htmlFor="username">Nombre de usuario:</label>
+      <input className={style.inputForm} type="text"   value={form.username} name="username" placeholder="Ingresa un nombre con el que ingresarás ✅" onChange={handleChange} />
       {errors.username && <p style={{ color: 'red' }}  >{errors.username}</p>}
       </div>
 
-      <div>
-      <label htmlFor="password">Contraseña:</label>
-      <input type="password" value={form.password} name="password" placeholder="Ingresa una contraseña😎" onChange={handleChange} />
-      <h6>Debe tener al menos 8 caracteres, una letra minúscula, una letra mayúscula, un número y un carácter especial</h6>
-      {errors.password && <p style={{ color: 'red' }}   >{errors.password}</p>}
+      <div className={style.divForm}>
+      <label className={style.labelForm} htmlFor="password">Contraseña:</label>
+      <input className={style.inputForm} type="password" value={form.password} name="password" placeholder="Ingresa una contraseña😎" onChange={handleChange} />
+      {errors.password && <p style={{ color: 'red' }}>{errors.password}</p>}
       </div>
 
-      <button type="submit">Enviar</button>
+      <div className={style.divBoton}>
+      <button type="submit" className={style.botonForm} disabled={errors.password && errors.username || !form.password  }>Enviar</button>
+      </div>
       </form>
+      
+
+
+      
     </div>
   )
 }
-/*name, username, email, password, birthdate, numero dni */
+
 export default Login
 
 

@@ -5,6 +5,10 @@ import style from "./styles/App.module.css"
 import Register from "./views/Register"
 import Login from "./views/Login"
 import Footer from "./components/Footer"
+import FormAppointment from "./views/Appointments"
+import {Routes, Route} from "react-router-dom"
+
+
 
 function App() {
   return (
@@ -12,7 +16,13 @@ function App() {
     <div className={style.body}>
      <Navbar/>
      <img className={style.glowimg} src="/images/glowgirl1.png" alt="" />
-     <Register/>
+     <Routes>
+      <Route path="/" element={<Home/>} />
+      <Route path="/register" element={<Register/>} />
+      <Route path="/formAppointment" element={<FormAppointment/>} />
+      <Route path="/misTurnos" element={<MisTurnos/>} />
+      <Route path="/login" element={<Login/>} />
+     </Routes>
      <Footer/>
     </div>
     
@@ -21,10 +31,10 @@ function App() {
   )
 }
 export default App
-//const [count, setCount] = useState(0)
-   //<MisTurnos/>
+
+// <Register/>
+// <FormAppointment/>
+ //
 //
-//<Login/>
-
-
-   //<Home/>
+//
+   //

@@ -31,7 +31,26 @@
     border-radius: 50%;
 }
 
-  
+  .contieneturno{
+    width: 120px;
+    height: 30px;
+    border-radius: 20px;
+    border: 2px solid palevioletred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+  }
+
+  .turno{
+    font-size: 15px;
+    text-decoration: none;
+    color: rgb(153, 49, 84)
+  }
+
+  .contieneturno:hover{
+    background-color: whitesmoke;
+  }
  
     
 
@@ -42,7 +61,7 @@
     }
  
     .header__nav{
-        
+        margin-left: 150px;
         display: flex;
         justify-content: space-between;
     }
@@ -50,13 +69,13 @@
         color: rgb(235, 53, 113);
         font-size: 17px;
         text-decoration: none;
-        margin-left: 20px;
-        font-weight: bold;
+        margin-left: 40px;
+        
     }
 
     .header__containlogin {
         display: flex;
-        margin-right: -300px;
+        margin-right: -100px;
        
       }
       

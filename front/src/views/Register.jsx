@@ -5,8 +5,10 @@ import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 const MySwal = withReactContent(Swal);
 import style from "../styles/Register.module.css"
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
+  const navigate = useNavigate();
 
 const inicialState = {
   name: '',
@@ -49,6 +51,7 @@ const registroUser = async () => {
         icon: 'success',
         confirmButtonText: 'Cerrar'
       });
+      navigate("/login")
     } else {
       MySwal.fire({
         title: 'Error😟',
@@ -117,9 +120,19 @@ const handleSubmit = (event) => {
       {errors.nDni && <p  style={{ color: 'red' }}  >{errors.nDni}</p>}
       </div>
       <div className={style.divBoton}  >
-      <button className={style.botonForm} type="submit"> Registrarse</button>
+
+      <button className={style.botonForm} disabled={errors.password || errors.username || errors.name || errors.birthdate || errors.email || errors.nDni || !form.password || !form.username || !form.birthdate || !form.email || !form.nDni || !form.name  } type="submit"> Registrarse</button>
       </div>
       </form>
+
+      <div className={style.videoContainer}>
+        <video className={style.video} autoPlay >
+          <source src="/images/videoinicio.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+
+
     </div>
   )
 }

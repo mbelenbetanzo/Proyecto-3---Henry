@@ -18,7 +18,7 @@ useEffect(() => {
     }
   };
     peticion();
-  }, [])
+  }, [turnos])
 
   return (
     <>

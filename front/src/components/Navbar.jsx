@@ -2,6 +2,9 @@ import React from 'react'
 import style from '../styles/Navbar.module.css'
 
 const Navbar = () => {
+
+
+
   return (
     <header className={style.header}>
         <div className={style.header__containlogo}>
@@ -13,6 +16,9 @@ const Navbar = () => {
              <a className={style.header__navbtn}   href="#">Tratamientos</a>
              <a className={style.header__navbtn}   href="#">Contactanos✨</a>
         </nav>
+        <div className={style.contieneturno} >
+          <a  className={style.turno} href="#">Sacar turno</a>
+        </div>
         <div className={style.header__containlogin}>
             <a className={style.header_login} href=""></a>
         </div>
