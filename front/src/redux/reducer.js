@@ -11,6 +11,9 @@ export const userSlice = createSlice({
   reducers: {
     addUser: (state, action) => {
         state.userActive = action.payload
+    },
+    addUserAppointments: (state, action) => {
+      state.userAppointments = action.payload
     }
 
 
@@ -23,4 +26,4 @@ export const userSlice = createSlice({
 
 });
 
-export const { addUser } = userSlice.actions
+export const { addUser, addUserAppointments } = userSlice.actions

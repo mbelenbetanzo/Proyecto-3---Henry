@@ -4,22 +4,30 @@ import Turno from '../components/Turno';
 import style from '../styles/Turno.module.css'
 import axios from "axios";
 import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { addUserAppointments } from '../redux/reducer';
 
 const MisTurnos = () => {
 
-const [turnos, setTurnos] = useState([]);
+//const [turnos, setTurnos] = useState([]);
+const userData = useSelector((state) => state.userActive);
+const turnos = useSelector((state) => state.userAppointments);
+const dispatch = useDispatch();
 
 useEffect(() => {
   const peticion = async () => {
     try { 
-      const response = await axios.get('http://localhost:3004/appointments')
-      setTurnos(response.data.message)
+      console.log(userData);
+      const response = await axios.get(`http://localhost:3004/users/${userData.id}`)
+      dispatch(addUserAppointments(response.data.appointments))
+      console.log(response);
+      //setTurnos(response.data.turnos)
     } catch (error) {
       console.error("Error:", error)
     }
   };
     peticion();
-  }, [turnos])
+  }, [])
 
   return (
     <>
@@ -31,7 +39,8 @@ useEffect(() => {
     </div>
     <div className={style.contenedorTurnos}>
       {
-      turnos.length ? ( turnos?.map((turno => {
+        //.length
+      turnos ? ( turnos?.map((turno => {
          return <Turno key={turno.id} date={turno.date} time={turno.time} id={turno.id} description={turno.description} status={turno.status}
       />}))) : <h2 className={style.noturnos}>No tenes turnos agendados😟</h2>   }
     </div>
@@ -42,5 +51,3 @@ useEffect(() => {
 
 export default MisTurnos
 
-//axios.get("http://localhost:3004/appointments").then((res) => setTurnos(res.data));
-//}, []);

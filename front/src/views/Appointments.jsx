@@ -6,14 +6,22 @@ import withReactContent from 'sweetalert2-react-content';
 const MySwal = withReactContent(Swal);
 import style from "../styles/FormAppointment.module.css"
 import { Link } from 'react-router-dom';
+//import { useDispatch } from 'react-redux';
+//import {addUserAppointments} from '../redux/reducer'
+//import { addUser } from "../redux/reducer";
+// const dispatch = useDispatch()
+import { useSelector } from "react-redux";
 
 
 const FormAppointment = () => {
-
+ 
+  const userData = useSelector((state) => state.userActive);
+  
 const inicialState = {
   date: '',
   time: '',
-  description: ''
+  description: '',
+  
 }
 
 const [form, setForm] = useState(inicialState);
@@ -31,14 +39,18 @@ useEffect(() => {
 
 const handleChange = (event) => {
  const {name, value} = event.target;
- setForm({...form, [name]: value})
+ setForm({...form, [name]: value, userId: userData.id})
 
 }
 
+
+
 const registroUser = async () => {
  try {
+  console.log(form);
    const response = await axios.post("http://localhost:3004/appointments", form);
-   if(response.status === 201) {
+   console.log(response);
+   if(response.status === 200) {
      MySwal.fire({
        title: '✨Agendaste un turno con éxito✨',
        text: 'Estamos listos para brindarte el mejor servicio✅',
@@ -47,8 +59,8 @@ const registroUser = async () => {
       });
     } else {
       MySwal.fire({
-        title: 'Error😟',
-        text: 'No pudimos registrar tu turno. Chequea los datos e intenta de nuevo🙌',
+        title: 'No pudimos crear tu turno😟',
+        text: 'Proba nuevamente o comunicate al 22345757545',
        icon: 'success',
         confirmButtonText: 'Cerrar'
       });
@@ -64,6 +76,7 @@ const handleSubmit = (event) => {
   event.preventDefault()
   registroUser()
 }
+console.log(handleSubmit)
 
   return (
     <div className={style.contenedor}  >
@@ -95,11 +108,12 @@ const handleSubmit = (event) => {
       </div>
       
       <form onSubmit={handleSubmit} className={style.form} >
+        
       <h2 className={style.tituloForm} >Agenda tu próximo turno🪄</h2>
 
       <div className={style.divForm}>
       <label  className={style.labelForm} htmlFor="date">Fecha:</label>
-      <input className={style.inputForm} type="date" value={form.date} name="date" onChange={handleChange} />
+      <input className={style.inputForm} type="date" value={form.date}  name="date" onChange={handleChange} />
       {errors.date && <p style={{ color: 'red' }}>{errors.date}</p>}
       </div>
 
@@ -112,13 +126,14 @@ const handleSubmit = (event) => {
 
       <div className={style.divForm} >
       <label className={style.labelForm} htmlFor="description" >Tratamiento:</label>
-      <input className={style.inputForm}  type="text" value={form.description} name="description" placeholder="Ingresa tu nombre completo acá 🙌" onChange={handleChange} />
+      <input className={style.inputForm}  type="text" value={form.description}  name="description" placeholder="Ingresa tu nombre completo acá 🙌" onChange={handleChange} />
       <h6 className={style.textoForm}>Chequeá todas las opciones que tenemos para vos a tu izquierda✨</h6>
       {errors.description && <p style={{ color: 'red' }}    >{errors.description}</p>}
       </div>
 
       <div className={style.divBoton}  >
       <button className={style.botonForm} type="submit">Pedir turno</button>
+      
       </div>
       </form>
     </div>

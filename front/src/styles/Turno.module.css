@@ -79,6 +79,7 @@
 .noturnos{
     color: rgb(219, 86, 109);
     font-size: 25px;
+    margin-top: 100px;
 }
 
 .contenedorTurnos{
@@ -87,7 +88,7 @@
     justify-content: space-around;
     width: 100%;
     background-color: inherit;
-    height: auto;
+    height: 1000px;
     margin-top: 10px;
     flex-wrap: wrap;
     margin-bottom: 30px;
