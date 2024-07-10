@@ -86,8 +86,10 @@
     justify-content: space-around;
     width: 100%;
     background-color: inherit;
-    height: 1000px;
-    margin-top: 30px;
+    height: auto;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
     
   }
 

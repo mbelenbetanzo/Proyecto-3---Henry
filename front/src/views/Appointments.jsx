@@ -5,6 +5,7 @@ import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 const MySwal = withReactContent(Swal);
 import style from "../styles/FormAppointment.module.css"
+import { Link } from 'react-router-dom';
 
 const FormAppointment = () => {
 
@@ -65,8 +66,11 @@ const handleSubmit = (event) => {
 }
 
   return (
-    <div className={style.contenedorForm} >
-
+    <div className={style.contenedor}  >
+      <div className={style.contenedorback}>
+        <Link to="/home" className={style.back} >⬅️ Volver a mi perfil</Link>
+      </div>
+      <div className={style.contenedorForm} >
       <div className={style.cartel}>
        <h2 className={style.tituloCarteles}>Tratamientos:</h2>
        <h4 className={style.tratamientos}>Corte ..................................$8.000</h4>
@@ -101,7 +105,7 @@ const handleSubmit = (event) => {
 
       <div className={style.divForm}>
       <label  className={style.labelForm} htmlFor="time" >Hora</label>
-      <input className={style.inputForm} type="time" value={form.time} name="time" onChange={handleChange} />
+      <input className={style.inputForm} type="time" value={form.time} name="time"  onChange={handleChange} min="08:00" max="17:00" />
       <h6 className={style.textoForm}>Horario de atención: Lunes a Viernes de 08 a 17hs⚠️ </h6>
       {errors.time && <p style={{ color: 'red' }}    >{errors.time}</p>}
       </div>
@@ -117,6 +121,7 @@ const handleSubmit = (event) => {
       <button className={style.botonForm} type="submit">Pedir turno</button>
       </div>
       </form>
+    </div>
     </div>
   )
 }

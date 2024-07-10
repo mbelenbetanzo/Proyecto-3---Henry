@@ -1,7 +1,7 @@
 .contenedor{
     display: flex;
     flex-direction: column;
-    height: 1100px;
+    height: 1700px;
     margin-left: 0;
     margin-top: -10px;
 
@@ -10,50 +10,163 @@
 
 
 
-.bienvenido{} 
+.bienvenido{
+    color: palevioletred;
+    text-align: center;
+    margin-top: 30px;
+} 
 
-.contienebotones{} 
+.contienebotones{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    transition: transform 0.1s ease;
+    
+} 
 
-.boton{} 
+.boton{
+    background-color: palevioletred;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    border-radius: 20px;
+    width: 250px;
+    text-align: center;
+    transition: 0.2;
+    border: 2px solid palevioletred;
+} 
 
-.main{} 
+.boton:hover{
+    background-color: pink;
+    transform: translateY(-4px);
+}
 
-.mainizq{} 
+.main{
+    margin-top: 80px;
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
 
-.main_titulo{} 
+} 
 
-.main_parrafo{}
-.main_der{} 
+.mainizq{
+    width: 400px;
+} 
 
-.main_img{} 
+.main_titulo{
+    text-align: center;
+    margin-bottom: 15px;
+} 
 
-.section{} 
-
-.section_tratamiento{} 
-
-.section_card{} 
-
-.section_titulo{}
-
-
-.section_img{} 
-
-.section_parrafo{} 
-
-.contactanos_izq{}
-
-.contactanos_titulo{}
-
-.contactanos_mapa{} 
-
-.contactanos_cmapa{} 
-.contactanos_der{} 
-
-.contactanostitulo{} 
-
-.contactanos_texto{} 
-
-.logo{}
+.main_parrafo{
+    text-align: justify;
+    width: 600px;
+}
 
 
-.contactanos_logos{}
+.main_img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+} 
+
+.section{
+    background-color: palevioletred;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    height: 700px;
+    justify-content: space-between;
+    padding: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+} 
+
+.section_tratamiento{
+    text-align: center;
+    color: black;
+    margin-top: 25px;
+    font-size: 30px;
+} 
+
+.section_card{
+    width: 200px;
+    height: 225px;
+    background-color: black;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    
+} 
+
+.section_card:hover {
+    transform: translateY(-10px);
+    background-color: rgb(141, 42, 75);
+    
+  }
+
+.section_titulo{
+    color: whitesmoke;
+    text-align: center;
+}
+
+
+.section_img{
+    width: 200px;
+    height: 230px;
+    border-radius: 10px;
+} 
+
+.section_parrafo{
+    color: whitesmoke;
+    text-align: center;
+} 
+
+.contactanos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 700px;
+    background: url(/images/card3.png);
+    align-items: center;
+}
+
+.contactanos_titulo{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 8px;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.contactanos_der{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} 
+
+
+
+.contactanos_texto{
+    text-align: justify;
+    width: 500px;
+    margin-bottom: 20px;
+} 
+
+.logo{
+    width: 70px;
+    height: 70px;
+}
+
+
+.contactanos_logos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    cursor: pointer;
+}

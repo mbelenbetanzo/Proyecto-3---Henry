@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Turno from '../components/Turno';
 import style from '../styles/Turno.module.css'
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 const MisTurnos = () => {
 
@@ -22,6 +23,9 @@ useEffect(() => {
 
   return (
     <>
+    <div className={style.contenedorback}>
+        <Link to="/home" className={style.back} >⬅️ Volver a mi perfil</Link>
+      </div>
   <div className={style.contenedorTitulo}>
     <h1 className={style.turnos}>MIS TURNOS✂️</h1>
     </div>
