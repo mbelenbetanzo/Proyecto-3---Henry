@@ -61,7 +61,7 @@
     }
  
     .header__nav{
-        margin-left: 80px;
+        margin-left: 50px;
         display: flex;
         justify-content: space-between;
     }
@@ -74,17 +74,18 @@
     }
 
     .header__containlogin {
-        display: flex;
-        margin-right: -180px;
+        
+        margin-right: -280px;
        
       }
       
       .header_login {
 
-        width: 40px; 
-        height: 40px;
-        background: url('/images/logonavbarlogin.svg');
-        border-radius: 50%;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        background-color: palevioletred;
+       
         cursor: pointer;
         
        

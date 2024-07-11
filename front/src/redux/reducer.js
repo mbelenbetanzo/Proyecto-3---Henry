@@ -22,16 +22,8 @@ export const userSlice = createSlice({
         } 
         return appointment;
       })
-    }
-
-
-
-
-
-
+    },
   }
-
-
 });
 
 export const { addUser, addUserAppointments, cancelAppointmentBoton } = userSlice.actions
