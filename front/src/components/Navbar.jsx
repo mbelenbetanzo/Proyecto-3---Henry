@@ -5,8 +5,6 @@ import { Link, useLocation } from 'react-router-dom';
 const Navbar = () => {
   const location = useLocation();
   const isOnRegisterPage = location.pathname === '/';
-
-
   return (
     <header className={style.header}>
         <div className={style.header__containlogo}>
