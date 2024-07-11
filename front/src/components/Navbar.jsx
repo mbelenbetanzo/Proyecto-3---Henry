@@ -14,7 +14,7 @@ const Navbar = () => {
         </div>
         <nav className={style.header__nav}>
         <Link to="/Home" className={style.header__navbtn}>
-        <button disabled={isOnRegisterPage} > ✨HOME✨ </button></Link>     
+        <button disabled={isOnRegisterPage} className={style.header__navHome} > ✨MY HOME </button></Link>     
         <Link to="/tratamientos" className={style.header__navbtn}>TRATAMIENTOS</Link>
         <Link to="/contactanos" className={style.header__navbtn}>CONTACTANOS✨</Link>  
         </nav>

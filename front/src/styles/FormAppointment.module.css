@@ -3,7 +3,7 @@
     
 }
 
-.contenedorback{
+/*.contenedorback{
     background-color: palevioletred;
     width: 190px;
     height: 40px;
@@ -24,7 +24,7 @@ justify-self: center;
     align-self: center;
     text-align: center;
     text-decoration: none;
-}
+}*/
 
 .contenedorForm{
    
@@ -143,3 +143,26 @@ justify-self: center;
     color: rgb(211, 65, 114);
     text-align: justify
 }
+
+.contenedorback {
+    position: relative;
+   
+  }
+  
+  .back {
+    position: absolute;
+    top: 30px;
+    left: 10px; 
+    z-index: 10; 
+    padding: 10px 20px;
+    border: none; 
+    border-radius: 10px; 
+    background-color: #f06292; 
+    color: white; 
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+
