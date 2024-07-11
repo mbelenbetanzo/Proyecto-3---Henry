@@ -6,10 +6,7 @@ import withReactContent from 'sweetalert2-react-content';
 const MySwal = withReactContent(Swal);
 import style from "../styles/FormAppointment.module.css"
 import { Link } from 'react-router-dom';
-//import { useDispatch } from 'react-redux';
-//import {addUserAppointments} from '../redux/reducer'
-//import { addUser } from "../redux/reducer";
-// const dispatch = useDispatch()
+
 import { useSelector } from "react-redux";
 
 

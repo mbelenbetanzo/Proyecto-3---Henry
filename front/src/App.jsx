@@ -36,9 +36,3 @@ function App() {
 }
 export default App
 
-// <Register/>
-// <FormAppointment/>
- //
-//
-//
-   //

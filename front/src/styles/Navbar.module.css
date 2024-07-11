@@ -97,11 +97,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 20px; /* Ajusta según sea necesario */
+  padding: 10px 20px; 
   border: none;
-  border-radius: 10px; /* Ajusta según sea necesario */
-  background-color: white; /* Ajusta según sea necesario */
-  font-size: 17px; /* Ajusta según sea necesario */
+  border-radius: 10px; 
+  background-color: white; 
+  font-size: 17px; 
   height: 25px;
   color: rgb(235, 53, 113);
   background-color: inherit;

@@ -26,7 +26,7 @@ const Navbar = () => {
         </div>
     </header>
   )
-  //disabled={!isLoggedIn}
+  
 }
 
 export default Navbar
